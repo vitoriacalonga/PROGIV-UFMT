@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fã Clube das Winx!</title>
+    <style>
+      body {
+        background-color: #e8d5f0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #d47fa6;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      main {
+        padding: 30px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #e8d5f0;
+      }
+
+      table, th, td {
+        border: 1px solid #ccc;
+      }
+
+      th {
+        background-color: #d47fa6;
+        color: white;
+        padding: 10px;
+        text-align: left;
+      }
+
+      td {
+        padding: 10px;
+        vertical-align: top;
+      }
+
+      td img {
+        width: 80px;
+      }
+
+      h2 {
+        color: #782278;
+      }
+
+      a {
+        color: #6a0dad;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 400px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f5eaff;
+      }
+
+      textarea {
+        height: 80px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        padding: 8px 20px;
+        background-color: #d47fa6;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        width: fit-content;
+      }
+
+      footer {
+        background-color: #c0607a;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!--cabecalho-->
+    <header>
+      <h1>Fã Clube das Winx!</h1>
+      <p>Bem-vindo(a) ao site das fadas mais poderosas!</p>
+    </header>
+
+    <main>
+
+      <!-- tabela -->
+      <h2>Times das Winx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th><center>Nome</center></th>
+            <th><center>Descrição</center></th>
+            <th><center>Imagem</center></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><center>Bloom</center></td>
+            <td><center>Fada da Chama do Dragão.</center></td>
+            <td><center>
+              <img
+                src="https://imgs.search.brave.com/6l8Wjol_5csOWG3NMgA7w1BiP3uMJ4ekDDSxa0l2PwE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0L3Ro/ZXdpbngvaW1hZ2Vz/LzAvMGYvLTEucG5n/L3JldmlzaW9uL2xh/dGVzdC9zY2FsZS10/by13aWR0aC1kb3du/LzE3OT9jYj0yMDE4/MDYyNjA4MjU0OA"
+                alt="Bloom">
+                </center>
+            </td>
+          </tr>
+          <tr>
+            <td><center>Stella</center></td>
+            <td><center>Fada do Sol Brilhante.</center></td>
+            <td><center>
+              <img
+                src="https://imgs.search.brave.com/MMvxzL27Y1WPxM0rLmeWsEjWclYduW9GbKGKCZwKqn4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg1LzY5/LzhlLzg1Njk4ZWIz/NWE2ZWRjNTE2M2Zl/OGVlMTdiNjkyMmJm/LmpwZw"
+                alt="Stella">
+                </center>
+            </td>
+          </tr>
+          <tr>
+            <td><center>Flora</center></td>
+            <td><center>Fada da Natureza</center></td>
+            <td><center>
+              <img
+                src="https://imgs.search.brave.com/U6vVgbxvonOjwc7_GxHT3KZgtwovnSWcLFpe_3Z_x9g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzIzLzlk/LzkxLzIzOWQ5MWQ4/MTk0ZjcwYmM3MGZl/MGI0ZDhhNDdkNDNl/LmpwZw"
+                alt="Flora">
+                </center>
+            </td>
+          </tr>
+          <tr>
+            <td><center>Musa</center></td>
+            <td><center>Fada da Música. </center></td>
+            <td><center>
+              <img src="https://imgs.search.brave.com/nA-06lZBY8UD3fmLuTzSzy6ZJ97BPoYxMrAVigCvtyI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2RmLzdl/Lzc5L2RmN2U3OWMy/YTU1NzY5YWNmOTYx/OTQ0MjIyOGI2YWZj/LmpwZw" 
+                  alt="Musa">
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td><center>Tecna</center></td>
+            <td><center>Fada da Tecnologia.</center></td>
+            <td><center>
+              <img src="https://imgs.search.brave.com/Z7WDhCDWmDbW8BEc8jJA_TQrECnWqAdb37u8Roa75ek/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtd2l4bXAtZWQz/MGE4NmI4YzRjYTg4/Nzc3MzU5NGMyLndp/eG1wLmNvbS9mLzU0/OWEwZjU5LThiMjct/NGQxZC04Y2YyLTZl/N2E3NGNlNDNmNC9k/OHkxOGpiLWU3YjA0/MWM2LWRhNTgtNDg1/OC1hZDM5LTU5N2Uw/MjBkYTM0Mi5wbmcv/djEvZmlsbC93XzEw/MjQsaF8xNDQ5L3Rl/Y25hX2NoYXJtaXhf/b2ZmaWNpYWxfYnlf/YW5hemdyZWRfZDh5/MThqYi1mdWxsdmll/dy5wbmc_dG9rZW49/ZXlKMGVYQWlPaUpL/VjFRaUxDSmhiR2Np/T2lKSVV6STFOaUo5/LmV5SnpkV0lpT2lK/MWNtNDZZWEJ3T2pk/bE1HUXhPRGc1T0RJ/eU5qUXpOek5oTldZ/d1pEUXhOV1ZoTUdR/eU5tVXdJaXdpYVhO/eklqb2lkWEp1T21G/d2NEbzNaVEJrTVRn/NE9UZ3lNalkwTXpj/ellUVm1NR1EwTVRW/bFlUQmtNalpsTUNJ/c0ltOWlhaUk2VzF0/N0ltaGxhV2RvZENJ/NklqdzlNVFEwT1NJ/c0luQmhkR2dpT2lJ/dlppODFORGxoTUdZ/MU9TMDRZakkzTFRS/a01XUXRPR05tTWkw/MlpUZGhOelJqWlRR/elpqUXZaRGg1TVRo/cVlpMWxOMkl3TkRG/ak5pMWtZVFU0TFRR/NE5UZ3RZV1F6T1Mw/MU9UZGxNREl3WkdF/ek5ESXVjRzVuSWl3/aWQybGtkR2dpT2lJ/OFBURXdNalFpZlYx/ZExDSmhkV1FpT2xz/aWRYSnVPbk5sY25a/cFkyVTZhVzFoWjJV/dWIzQmxjbUYwYVc5/dWN5SmRmUS50MG9n/dFNxRzd2WTRvZGpL/WklJbGtXMkxxUEFJ/VVA5MThfeE1rbHhM/ZXpV" 
+              alt="Tecna">
+              </center>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+
+      <!-- lista nao ordenada-->
+      <h2>Transformações das Winxs:</h2>
+      <ul>
+        <li>Enchantix</li>
+        <li>Sirenix</li>
+        <li>Believix</li>
+        <li>Charmix</li>
+        <li>Cosmic</li>
+        <li>Mythix</li>
+        <li>Tynix</li>
+      </ul>
+
+      <!-- lista ordenada -->
+      <h2>Inimigos das Winx:</h2>
+      <ol>
+        <li>Valtor</li>
+        <li>Icy</li>
+        <li>Darcy</li>
+        <li>Stormy</li>
+      </ol>
+
+      <!--linnk -->
+      <h2>Wiki</h2>
+      <p>
+        Acesse o site a
+        <a href="https://winx.fandom.com/pt-br/wiki/Winx_Wiki" target="_blank">Wiki</a>
+        para saber mais sobre as Winx!
+      </p>
+
+      <!-- form-->
+      <h2>Formulário para entrar no fã clube</h2>
+      <form action="#" method="get">
+        
+        <label>Nome:</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Digite seu email">
+
+        <label>Mensagem:</label>
+        <textarea name="mensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
+
+        <!--botoes radiais-->
+        <label>Trix ou Winx?</label>
+        <span>
+          <input type="radio" name="time" value="trix"> Trix
+          &nbsp;
+          <input type="radio" name="time" value="winx"> Winx
+        </span>
+
+        <!--caixas de seleção-->
+        <label>Quais especialistas você gosta?:</label>
+        <span>
+          <input type="checkbox" name="esp" value="sky"> Sky
+          <input type="checkbox" name="esp" value="brandon"> Brandon
+          <input type="checkbox" name="esp" value="riven"> Riven
+          <input type="checkbox" name="esp" value="timmy"> Timmy
+          <input type="checkbox" name="esp" value="helia"> Hélia
+          <input type="checkbox" name="esp" value="nabu"> Nabu
+        </span>
+
+        <!--botao enviar-->
+        <input type="submit" value="Enviar">
+
+      </form>
+
+    </main>
+
+    <!--rodape-->
+    <footer>
+      <p>&copy; 2026 - Vitória Calonga</p>
+    </footer>
+
+  </body>
+</html>
