@@ -1,0 +1,183 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+body { 
+    background: linear-gradient(to right, #ffb7ca, #fce4ec 50%, #ffb7ca);
+    min-height: 100vh;
+}
+
+/* cabecalho */
+header {
+    background: linear-gradient(to right, #ff84a1, hsl(344, 100%, 82%), #ff84a1); /*cria um degrade*/
+    text-align: center;
+    font-size: 12px;
+    padding: 22px;
+    color: white; /*cor do texto*/
+}
+
+/*cada item da lista*/
+nav ul{
+    display: flex; /* para deixar a lista em uma linha só (inline)*/
+    justify-content: center; /*centraliza horizontalmente cada item*/
+    gap: 25px; /*espaco entre cada item*/
+    list-style: none; /*remove bollinhas da lista*/
+    padding: 0;
+}
+
+/*link de cada secao*/
+nav a{
+    text-decoration: none; /*remove sublinhado do link*/
+    color: white; /*cor do texto*/
+    font-weight: bold; /*deixa a letra em negrito*/
+}
+ /*sub*/
+.hero {
+    background: linear-gradient(135deg,#f085a1, #fab4c4, #ffb7ca);
+    text-align: center;
+    padding: 75px;
+    color: white;
+}
+
+/*box model das secoes*/
+main {
+    max-width: 1080px; /*define a largura maxima que cada conteudo pode ter*/
+    margin: 0 auto; /*centraliza o bloco na tela*/
+    padding: 30px 20px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 18px; /*curva borda*/
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(163, 11, 62, 0.521); /* sombra suave em tom de rosa */
+    margin-bottom: 24px; /*espaco entre um card e outro*/
+    border: 1px solid #fb84a0; /*cria borda e deixa ela rosa*/
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgb(72, 68, 68);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: rgb(81, 80, 80);
+    line-height: 1.6;
+    margin-top: 16px;
+}
+
+/*PERSONAGENS*/
+
+.personagens-grid{
+    display: flex; /*alinha*/
+    flex-wrap: wrap; /*permite que quebre a linha*/
+    gap: 12px;
+    margin-top: 16px;
+    justify-content: center; /*centraliza cada item*/
+}
+
+.personagens-item{
+    background-color: #fdb8ca;
+    box-shadow: 0 2px 12px rgba(163, 11, 62, 0.521);
+    border-radius: 14px;
+    padding: 10px 18px;
+    text-align: center;
+    min-width: 110px;
+    transition: border-color 0.2s, transform 0.2s;/*animacao com a interacao pelo hover*/
+}
+
+.personagens-item:hover {
+    background: linear-gradient(135deg,#e27995, #fab4c4, #e27995); /*cria degrade quando o cursor passa por cima*/
+    transform: translateY(-2px); /*levanda a caixa 2 pixels p cima*/
+}
+
+.personagens-item h2{
+    font-size: 1.2rem;
+    font-weight: 800; /*deixa negrito*/
+}
+
+.personagens-item p{
+    font-size: 0.8rem;
+}
+
+/*GALERIA*/
+.galeria-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.galeria-grid img{
+    background: linear-gradient(135deg,#e27995, #fab4c4, #e27995);
+    width: 150px; /*define largura fixa*/
+    height: 150px; /*define altura*/
+    object-fit: cover;      /* IMPORTANTE: Corta a imagem para preencher o quadrado sem distorcer */
+    box-shadow: 0 2px 12px rgba(163, 11, 62, 0.521);
+    border-radius: 14px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;/*animacao com a interacao pelo hover*/
+}
+
+.galeria-grid img:hover {
+    background: linear-gradient(135deg,#e27995, #fab4c4, #e27995); /*cria degrade quando o cursor passa por cima*/
+    transform: translateY(-2px); /*levanda a caixa 2 pixels p cima*/
+}
+
+/*FORMULARIO*/
+#entrar h2 {
+      margin-bottom: 18px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+
+}
+
+.form-group input,.form-group textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #f8bbd0;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.88rem;
+    color: #666;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg,#ea8fa7, #f297ac, #ea8fa7);
+    box-shadow: 0 2px 12px rgba(163, 11, 62, 0.521);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+footer {
+     background: linear-gradient(135deg,#ea8fa7, #f297ac, #ea8fa7);
+    text-align: center;
+    padding: 16px;
+    font-size: 0.85rem;
+    color: #880e4f;
+    font-weight: 600;
+    margin-top: 10px;
+}
