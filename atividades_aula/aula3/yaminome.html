@@ -1,136 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Yami no Me — Desafio da Máscara</title>
-  <style>
-    :root {
-      --bg: #050508;
-      --accent: #c084fc;
-      --accent2: #f43f5e;
-      --gold: #fbbf24;
-    }
-    body {
-      background: var(--bg);
-      color: #e2d9f3;
-      font-family: sans-serif;
-      overflow: hidden;
-      cursor: none; /* para o cursor personalizado */
-    }
-    /* Cursor personalizado */
-    #cursor {
-      position: fixed;
-      width: 22px; height: 22px;
-      border: 2px solid var(--accent);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-    }
-    /* Inimigo*/
-    .mascara {
-      position: absolute;
-      width: 90px;
-      cursor: none;
-      filter: drop-shadow(0 0 12px var(--accent));
-      transition: transform 0.2s;
-    }
-    /* Efeito de Sangue */
-    .sangue {
-      position: fixed;
-      width: 10px; height: 10px;
-      background: var(--accent2);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YAMI MASK — Caçada das Sombras</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div id="cursor"></div>
-  
-  <div id="tela-inicio">
-    <h1>Yami no Me</h1> <button id="btn-iniciar">Iniciar Jogo</button> </div>
+  <div id="particles-container"></div>
 
-  <div id="hud" style="display:none;">
-    <div>Pontos: <span id="pontos">0</span></div> <div>Tempo: <span id="tempo">15</span>s</div>
+  <div id="screen-start" class="screen active">
+    <div class="start-inner">
+      <p class="subtitle">⛩ CAÇADA DAS SOMBRAS ⛩</p>
+      <h1>YAMI<br><span>MASK</span></h1>
+      <p class="description">
+        A máscara aparece… e desaparece.<br>
+        Clique nela antes que as sombras a engulam.<br>
+        Você tem entre <strong>10 e 20 segundos</strong>.
+      </p>
+      <button id="btn-start">▶ INICIAR JOGO</button>
+    </div>
   </div>
 
-  <div id="arena"></div> <script>
-    // Referências do DOM 
-    const arena = document.getElementById('arena');
-    const elPontos = document.getElementById('pontos');
-    const btnIniciar = document.getElementById('btn-iniciar');
+  <div id="screen-game" class="screen">
+    <div id="hud">
+      <div id="hud-score">
+        <span class="hud-label">PONTOS</span>
+        <span id="score-display">0</span>
+      </div>
+      <div id="hud-timer">
+        <span class="hud-label">TEMPO</span>
+        <span id="timer-display">--</span>
+      </div>
+    </div>
+    <div id="game-area"></div>
+  </div>
 
-    let pontos = 0;
-    let jogoAtivo = false;
+  <div id="screen-end" class="screen">
+    <div class="end-inner">
+      <p class="end-label">FIM DA CAÇADA</p>
+      <h2 id="final-score-text">0 <span>pontos</span></h2>
+      <p id="final-message"></p>
+      <button id="btn-restart">↺ JOGAR NOVAMENTE</button>
+    </div>
+  </div>
 
-    // Lógica JavaScript: Mecânica principal
-    function criarMascara() {
-      if (!jogoAtivo) return;
-
-      // Math.random() para posições aleatórias
-      const x = Math.random() * (window.innerWidth - 100);
-      const y = Math.random() * (window.innerHeight - 100);
-
-      // Manipulação do DOM: createElement() [cite: 338]
-      const img = document.createElement('img');
-      img.src = 'mask_yami.png';
-      img.classList.add('mascara');
-      img.style.left = x + 'px';
-      img.style.top = y + 'px';
-
-      // Evento de clique: addEventListener()
-      img.addEventListener('click', (e) => {
-        pontos++;
-        elPontos.textContent = pontos; // Atualização da pontuação em tempo real
-        criarEfeitoSangue(e.clientX, e.clientY); // Feedback visual
-        img.remove(); // Manipulação do DOM: remove()
-      });
-
-      // Manipulação do DOM: appendChild() 
-      arena.appendChild(img);
-
-      // Inimigos desaparecem automaticamente: setTimeout() 
-      setTimeout(() => img.remove(), 900);
-    }
-
-    function iniciarJogo() {
-      pontos = 0;
-      jogoAtivo = true;
-      document.getElementById('hud').style.display = 'block';
-      document.getElementById('tela-inicio').style.display = 'none';
-
-      // Gerar inimigos continuamente: setInterval() 
-      const spawnInterval = setInterval(criarMascara, 700);
-
-      // Limitar duração do jogo: setTimeout() 
-      setTimeout(() => {
-        jogoAtivo = false;
-        clearInterval(spawnInterval);
-        alert("Fim de jogo! Pontuação: " + pontos);
-        location.reload();
-      }, 15000); // 15 segundos
-    }
-
-    // Cursor personalizado seguindo o mouse
-    document.addEventListener('mousemove', (e) => {
-      const cursor = document.getElementById('cursor');
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-
-    btnIniciar.addEventListener('click', iniciarJogo);
-
-    // Efeito Visual adicional (Sangue/Partículas)
-    function criarEfeitoSangue(x, y) {
-      const s = document.createElement('div');
-      s.classList.add('sangue');
-      s.style.left = x + 'px';
-      s.style.top = y + 'px';
-      document.body.appendChild(s);
-      setTimeout(() => s.remove(), 500);
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
