@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Press Start 2P (pixel) + Nunito (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== BANNER / HEADER ===== -->
+  <header class="banner">
+    <div class="banner__scanlines"></div>
+    <div class="banner__inner">
+      <div class="banner__pokeball" aria-hidden="true">
+        <div class="pokeball">
+          <div class="pokeball__top"></div>
+          <div class="pokeball__band"></div>
+          <div class="pokeball__bottom"></div>
+          <div class="pokeball__button"></div>
+        </div>
+      </div>
+      <div class="banner__text">
+        <h1 class="banner__title">POKÉDEX</h1>
+        <p class="banner__subtitle">Explore o mundo Pokémon</p>
+      </div>
+      <div class="banner__deco" aria-hidden="true">
+        <span class="banner__dot banner__dot--red"></span>
+        <span class="banner__dot banner__dot--yellow"></span>
+        <span class="banner__dot banner__dot--green"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== CONTROLES (busca + filtro) ===== -->
+  <section class="controls" aria-label="Controles de busca e filtro">
+    <div class="controls__inner">
+
+      <!-- Campo de busca -->
+      <div class="search-box">
+        <label for="search-input" class="sr-only">Buscar Pokémon</label>
+        <input
+          id="search-input"
+          class="search-box__input"
+          type="text"
+          placeholder="Nome ou número..."
+          autocomplete="off"
+        />
+        <button id="search-btn" class="search-box__btn" aria-label="Buscar">
+          <span class="search-box__icon">🔍</span>
+          <span>BUSCAR</span>
+        </button>
+        <button id="clear-btn" class="search-box__clear" title="Limpar busca" aria-label="Limpar busca">✕</button>
+      </div>
+
+      <!-- Filtro por tipo -->
+      <div class="filter-box">
+        <label for="type-select" class="filter-box__label">TIPO:</label>
+        <select id="type-select" class="filter-box__select">
+          <option value="all">Todos</option>
+          <!-- Populado dinamicamente pelo script.js -->
+        </select>
+      </div>
+
+      <!-- Contador de resultados -->
+      <p id="counter" class="controls__counter" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader" class="loader" role="status" aria-label="Carregando Pokémons">
+    <div class="loader__ball"></div>
+    <p class="loader__text">Carregando...</p>
+  </div>
+
+  <!-- ===== MENSAGEM DE ERRO ===== -->
+  <div id="error-msg" class="error-msg" role="alert" aria-live="assertive" hidden>
+    <span class="error-msg__icon">⚠️</span>
+    <p id="error-text" class="error-msg__text">Pokémon não encontrado!</p>
+    <button id="error-dismiss" class="error-msg__close">Fechar</button>
+  </div>
+
+  <!-- ===== GRID DE CARDS ===== -->
+  <main id="pokemon-grid" class="pokemon-grid" aria-label="Lista de Pokémons">
+    <!-- Cards injetados via script.js -->
+  </main>
+
+  <!-- ===== MODAL DE DETALHES ===== -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-name" hidden>
+    <div class="modal">
+      <button id="modal-close" class="modal__close" aria-label="Fechar">✕</button>
+      <div class="modal__header">
+        <span id="modal-number" class="modal__number"></span>
+        <h2 id="modal-name" class="modal__name"></h2>
+        <div id="modal-types" class="modal__types"></div>
+      </div>
+      <div class="modal__body">
+        <div class="modal__images">
+          <img id="modal-img-front" class="modal__sprite" alt="" />
+          <img id="modal-img-back" class="modal__sprite modal__sprite--back" alt="" />
+        </div>
+        <div class="modal__info">
+          <div class="modal__stat-group">
+            <span class="modal__stat-label">Altura</span>
+            <span id="modal-height" class="modal__stat-value"></span>
+          </div>
+          <div class="modal__stat-group">
+            <span class="modal__stat-label">Peso</span>
+            <span id="modal-weight" class="modal__stat-value"></span>
+          </div>
+          <div class="modal__stat-group">
+            <span class="modal__stat-label">Habilidades</span>
+            <span id="modal-abilities" class="modal__stat-value"></span>
+          </div>
+        </div>
+        <div class="modal__stats">
+          <h3 class="modal__stats-title">STATUS BASE</h3>
+          <div id="modal-stat-bars" class="modal__stat-bars"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>Dados fornecidos por <a href="https://pokeapi.co" target="_blank" rel="noopener">PokéAPI</a> • Pokémon &amp; nomes são marcas da Nintendo/Game Freak</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
