@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!--atributo de idioma, indica ao navegados qual o idioma-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miraculous Wiki</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- importa fontes externas -> Google Fonts: Bangers (display) + Nunito (body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lobster&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="header-inner">
+      <div class="logo">
+        <img src="https://www.miraculousladybug.com/wp-content/uploads/2023/02/MIR_CLASSIC_logo_rgb_web.png" alt="Miraculous Logo" class="logo-img">
+      </div>
+
+          <nav><ul>
+              <li><a href="#inicio">INICIO</a></li>
+              <li><a href="#sinopse">SINOPSE</a></li>
+              <li><a href="#personagens">PERSONAGENS</a></li>
+              <li><a href="#kwamis">KWAMIS</a></li>
+              <li><a href="#miraculous">MIRACULOUS</a></li>
+              <li><a href="#temporadas">TEMPORADAS</a></li>
+              <li><a href="#filmes">FILMES</a></li>
+          </ul>    
+          </nav>
+        </header>
+
+      <!--para colocar a imagem e apresentação inicial-->
+      <section id="inicio" class="hero-section">
+        <div class="hero-content">
+          <h1><span class = "miraculous-text">Miraculous</span><br>As Aventuras de Ladybug & Cat Noir</h1>
+        </div>
+      </section>
+
+    <main>
+
+      <section id = "sinopse" class = "container-text ">
+        <!--Sinopse-->
+        <div class = "sinopse-container">
+          <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/pecto.png"
+       alt="Tikki-Plagg" class="deco-kwami deco-tikki-plagg">
+
+          <div div class="sinopse-content fade-in">
+            <div class = "sinopse-text"> 
+              <h3><blockquote>"A verdadeira coragem nasce do sacrifício para proteger quem amamos."</blockquote></h3>
+              <p>Entre no universo de <strong>Miraculous: As Aventuras de Ladybug & Cat Noir</strong>, onde a beleza atemporal de Paris esconde segredos ancestrais e heróis improváveis. Como qualquer adolescente, Marinette e Adrien lidam com os dilemas da escola, amizades e o amadurecimento. Mas, quando a sombra de Hawk Moth ameaça a paz, eles se transformam em Ladybug e Cat Noir — os guardiões da Cidade Luz.</p>
+              <p>Unindo mistério, magia e ação, a série equilibra a adrenalina das batalhas com as emoções da vida jovem. Sob o céu de Paris, cada missão é uma lição sobre bravura, lealdade e o peso da responsabilidade. Juntos, eles enfrentam forças sombrias que se alimentam de sentimentos negativos, sem saber que seus destinos estão ligados por muito mais do que apenas o dever.</p>
+              <p>Acompanhe Marinette e Adrien em uma jornada de descobertas onde o maior desafio não é derrotar o vilão, mas manter suas identidades em segredo enquanto protegem o coração de Paris. Afinal, Miraculous nos mostra que o verdadeiro heroísmo pode viver em qualquer um de nós.</p>
+          </div>
+
+          <div class="sinopse-imagem">
+              <img src="https://m.media-amazon.com/images/I/61wPNN6p4US._AC_UF894,1000_QL80_.jpg" alt="Pôster Ladybug e Cat Noir">
+            </div>
+          </div>
+          </div>
+          
+          
+        
+      </section>
+
+      <!--PERSONAGENS-->
+
+      <!--Ladybug-->
+      <section id="personagens" class="personagens-section">
+        <h2 class="titulo-center">Personagens</h2>
+
+        <div class="personagens-grid">
+
+          <article class="char-card" onclick="virarCard(this)">
+            
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Ladybug.webp" alt="Ladybug">
+                <h3>Ladybug</h3>
+              </div>
+              
+              <div class="card-back">
+                <img src="https://static.wikia.nocookie.net/omniverso/images/b/b2/Marinette_1.png/revision/latest?cb=20191228012331&path-prefix=pt-br" alt="Marinette">
+                <h3>Marinette</h3>
+                <p><strong>Miraculous:</strong> Joaninha</p>
+                <p><strong>Kwami:</strong> Tikki</p>
+                <p><strong>Poder:</strong> Criação</p>
+                <p><strong>Arma:</strong> Ioiô</p>
+              </div>
+            </div>
+          </article>
+
+          <!--Cat Noir-->
+          <article class="char-card" onclick="virarCard(this)">
+            
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Chatnoir.webp" alt="Ladybug">
+                <h3>Cat Noir</h3>
+              </div>
+              
+              <div class="card-back">
+                <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/S1E1-6.webp" alt="Marinette">
+                <h3>Adrien</h3>
+                <p><strong>Miraculous:</strong> Gato </p>
+                <p><strong>Kwami:</strong> Plagg</p>
+                <p><strong>Poder:</strong> Destruição</p>
+                <p><strong>Arma:</strong> Bastão</p>
+              </div>
+            </div>
+          </article>
+
+          <!--Hawk Moth-->
+          <article class="char-card" onclick="virarCard(this)">
+
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Hawk-Moth-2.webp" alt="Hawk Moth">
+                <h3>Hawk Moth</h3>
+              </div>
+
+              <div class="card-back">
+                <img src="https://static.wikia.nocookie.net/miraculousladybug/images/3/3c/Gabriel_Agreste_%28sentimonstro%29.png/revision/latest?cb=20250930185448&path-prefix=pt-br" alt="Gabriel">
+                <h3>Gabriel</h3>
+                <p><strong>Miraculous:</strong> Borboleta</p>
+                <p><strong>Kwami:</strong> Nooroo</p>
+                <p><strong>Poder:</strong> Akumatização</p>
+                <p><strong>Arma:</strong> Bengala</p>
+              </div>
+            </div>
+
+        </article>
+        
+        <!--Mayura-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Mayura-2.webp" alt="Mayura">
+              <h3>Mayura</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCXtQNj2HWAAHqljQ0MPF68DN3Wh0vdjjHP1MN8CDsYH1cASY_LUpV1TLGofPyfI5KHqVk2jVyhYsoqQ81KtqI_2cS3mmei7VLyIdI-Q&s=10" alt="Nathalie">
+              <h3>Nathalie</h3>
+              <p><strong>Miraculous:</strong> Pavão</p>
+              <p><strong>Kwami:</strong> Duusu</p>
+              <p><strong>Poder:</strong> Amokização</p>
+              <p><strong>Arma:</strong> Leque</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Mestre fu-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Master-Fu.webp" alt="Mestre Fu">
+              <h3>Mestre Wang Fu</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/miraculousladybug/images/a/ad/Tartaruga_Jade.png/revision/latest?cb=20210820174857&path-prefix=pt-br" alt="Wang Fu">
+              <h3>Wang Fu</h3>
+              <p><strong>Miraculous:</strong> Tartaruga </p>
+              <p><strong>Kwami:</strong> Wayzz</p>
+              <p><strong>Poder:</strong> Proteção</p>
+              <p><strong>Função:</strong> Guardião</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Alya - rena rouge-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Rena-Rouge-2.webp" alt="Rena Rouge">
+              <h3>Rena Rouge</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://i.pinimg.com/474x/88/0a/ae/880aaebac446484a0b2598545371d0a0.jpg" alt="Alya">
+              <h3>Alya</h3>
+              <p><strong>Miraculous:</strong> Raposa</p>
+              <p><strong>Kwami:</strong> Trixx</p>
+              <p><strong>Poder:</strong> Miragem</p>
+              <p><strong>Arma:</strong> Flauta</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Carapace-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Carapace-1.webp" alt="Carapace">
+              <h3>Carapace</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/lady-bug/images/1/10/Nino_Lahiffe_Square.png/revision/latest?cb=20230325130053" alt="Nino">
+              <h3>Nino</h3>
+              <p><strong>Miraculous:</strong> Tartaruga</p>
+              <p><strong>Kwami:</strong> Wayzz</p>
+              <p><strong>Poder:</strong> Proteção</p>
+              <p><strong>Arma:</strong> Escudo</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Bunnyx-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Bunnyx-2.webp" alt="Bunnyx">
+              <h3>Bunnyx</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/zagtoon/images/e/e7/Alix_Kubdel_Square.webp/revision/latest?cb=20231128032749" alt="Alix">
+              <h3>Alix</h3>
+              <p><strong>Miraculous:</strong> Coelho</p>
+              <p><strong>Kwami:</strong> Fluff</p>
+              <p><strong>Poder:</strong> Tempo</p>
+              <p><strong>Arma:</strong> Guarda-chuva</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Chloe queen bee-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Queen-Bee-1.webp" alt="Queen Bee">
+              <h3>Queen Bee</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://preview.redd.it/is-chloe-becoming-evil-planned-from-the-beginning-or-a-last-v0-dne4gk8xl01c1.jpg?auto=webp&s=95d7eace51f171cfcca1445386a6d555807344ed" alt="Chloé">
+              <h3>Chloé</h3>
+              <p><strong>Miraculous:</strong> Abelha</p>
+              <p><strong>Kwami:</strong> Pollen</p>
+              <p><strong>Poder:</strong> Paralisia</p>
+              <p><strong>Arma:</strong> Pião</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Vesperia - zoe-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Vesperia-2.webp" alt="Vesperia">
+              <h3>Vesperia</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/miraculousladybug/images/6/61/Zo%C3%A9_Lee.png/revision/latest?cb=20250716180045&path-prefix=pt-br" alt="Zoé">
+              <h3>Zoé</h3>
+              <p><strong>Miraculous:</strong> Abelha</p>
+              <p><strong>Kwami:</strong> Pollen</p>
+              <p><strong>Poder:</strong> Ferroada</p>
+              <p><strong>Arma:</strong> Pião</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Luka vioerion-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Viperion-1.webp" alt="Viperion">
+              <h3>Viperion</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://preview.redd.it/the-problem-with-lukas-character-v0-9zgcffy9v7v31.jpg?width=640&crop=smart&auto=webp&s=8ce923fc49b8f936350e96791efa2d54f1569d9c" alt="Luka">
+              <h3>Luka </h3>
+              <p><strong>Miraculous:</strong> Serpente</p>
+              <p><strong>Kwami:</strong> Sass</p>
+              <p><strong>Poder:</strong> Segunda Chance</p>
+              <p><strong>Arma:</strong> Lira</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Kagami-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Ryoko-1.webp" alt="Ryûko">
+              <h3>Ryûko</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://preview.redd.it/why-is-kagami-a-senti-monster-v0-sj1wes3rfy0c1.jpg?width=454&format=pjpg&auto=webp&s=743f60c51b37d9edf14c8864c9efe628454925bf" alt="Kagami">
+              <h3>Kagami </h3>
+              <p><strong>Miraculous:</strong> Dragão</p>
+              <p><strong>Kwami:</strong> Longg</p>
+              <p><strong>Poder:</strong> Perfeição</p>
+              <p><strong>Arma:</strong> Espada</p>
+            </div>
+          </div>
+        </article>
+
+          <!--pegasus - Max-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Pegasus-2.webp" alt="Pegasus">
+              <h3>Pegasus</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/coverykids/images/c/c5/Max_-_Miraculous.JPG/revision/latest?cb=20221228120058&path-prefix=pt-br" alt="Max">
+              <h3>Max </h3>
+              <p><strong>Miraculous:</strong> Cavalo</p>
+              <p><strong>Kwami:</strong> Kaalki</p>
+              <p><strong>Poder:</strong>Teletransporte</p>
+              <p><strong>Arma:</strong> Ferradura</p>
+            </div>
+          </div>
+        </article>
+
+          <!--Pigella rose-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Pigella-copie-1.webp" alt="Pigella">
+              <h3>Pigella</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/zagtoon/images/a/a8/Rose_Lavillant_Square.png/revision/latest?cb=20231228234803" alt="Rose">
+              <h3>Rose</h3>
+              <p><strong>Miraculous:</strong> Porco</p>
+              <p><strong>Kwami:</strong> Daizzi</p>
+              <p><strong>Poder:</strong>Jubilação</p>
+              <p><strong>Arma:</strong> Pandeiro</p>
+            </div>
+          </div>
+        </article>
+
+
+        <!--Juleka-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Purpletigress-1.webp" alt="Purple Tigress">
+              <h3>Purple Tigress</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://preview.redd.it/is-juleka-anyone-elses-favourite-v0-9ov97l3mdmye1.jpg?width=640&crop=smart&auto=webp&s=b24043a8d48f4f497ca2e52bf736e790400d9bba" alt="Juleka">
+              <h3>Juleka </h3>
+              <p><strong>Miraculous:</strong> Tigre</p>
+              <p><strong>Kwami:</strong> Roaar</p>
+              <p><strong>Poder:</strong> Exaltação</p>
+              <p><strong>Arma:</strong> Boleadeira</p>
+            </div>
+          </div>
+        </article>
+
+        <!--King Monkey-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/King-Monkey-2.webp" alt="King Monkey">
+              <h3>King Monkey</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/miraculousladybug/images/9/9f/Kim_Chi%E1%BA%BFn_L%C3%AA-Ature.png/revision/latest/scale-to-width/360?cb=20250716180555&path-prefix=pt-br" alt="Kim">
+              <h3>Kim</h3>
+              <p><strong>Miraculous:</strong> Macaco</p>
+              <p><strong>Kwami:</strong> Xuppu</p>
+              <p><strong>Poder:</strong> Confusão</p>
+              <p><strong>Arma:</strong> Bastão</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Mylene-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Polymouse-2.webp" alt="Polymouse">
+              <h3>Polymouse</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/lady-bug/images/c/c4/Myl%C3%A8ne_Hapr%C3%A8le_Square.png/revision/latest?cb=20220226215723" alt="Mylène">
+              <h3>Mylène</h3>
+              <p><strong>Miraculous:</strong> Rato</p>
+              <p><strong>Kwami:</strong> Mullo</p>
+              <p><strong>Poder:</strong> Multiplicação</p>
+              <p><strong>Arma:</strong> Corda de Pular</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Caprikid-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Caprikid-3.webp" alt="Caprikid">
+              <h3>Caprikid</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/lady-bug/images/c/ca/Nathaniel_Kurtzberg_Square.png/revision/latest?cb=20211002205355" alt="Nathaniel">
+              <h3>Nathaniel </h3>
+              <p><strong>Miraculous:</strong> Cabra</p>
+              <p><strong>Kwami:</strong> Ziggy</p>
+              <p><strong>Poder:</strong> Paixão</p>
+              <p><strong>Arma:</strong> Pincel</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Marc-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Miraculous-Characters-Rooster-Bold.webp" alt="Rooster Bold">
+              <h3>Rooster Bold</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/miraculousladybug/images/2/2a/Marc_Anciel.png/revision/latest/scale-to-width/360?cb=20250716181653&path-prefix=pt-br" alt="Marc">
+              <h3>Marc </h3>
+              <p><strong>Miraculous:</strong> Galo</p>
+              <p><strong>Kwami:</strong> Orikko</p>
+              <p><strong>Poder:</strong> Pretensão</p>
+              <p><strong>Arma:</strong> Pena</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Sabrina-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Miss-Hound-2.webp" alt="Miss Hound">
+              <h3>Miss Hound</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/miraculousladybug/images/d/d8/Sabrina_Raincomprix.png/revision/latest?cb=20220703092047&path-prefix=pt-br" alt="Sabrina">
+              <h3>Sabrina </h3>
+              <p><strong>Miraculous:</strong> Cão</p>
+              <p><strong>Kwami:</strong> Barkk</p>
+              <p><strong>Poder:</strong>Adoração</p>
+              <p><strong>Arma:</strong> Coleira/Bola</p>
+            </div>
+          </div>
+        </article>
+        
+        <!--Ivan-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/03/Minautorox-2.webp" alt="Minotaurox">
+              <h3>Minotaurox</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://i.pinimg.com/736x/b7/1d/32/b71d32a14e864a4cb01f21ac104005ca.jpg" alt="Ivan">
+              <h3>Ivan</h3>
+              <p><strong>Miraculous:</strong> Boi</p>
+              <p><strong>Kwami:</strong> Stompp</p>
+              <p><strong>Poder:</strong> Determinação</p>
+              <p><strong>Arma:</strong> Martelo</p>
+            </div>
+          </div>
+        </article>
+
+        <!--Lila-->
+        <article class="char-card" onclick="virarCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://preview.redd.it/lets-talk-about-chrysalis-v0-tuncp3xakaef1.jpg?width=640&crop=smart&auto=webp&s=a528f5b80b5c6aafb1c82a00e5d50d7f3273c44c" alt="Lila">
+              <h3>Chrysalis</h3>
+            </div>
+            <div class="card-back">
+              <img src="https://static.wikia.nocookie.net/lady-bug/images/a/ac/Cerise_%28S6%29_Square.png/revision/latest?cb=20251023104555" alt="Volpina">
+              <h3>Lila/Cerise</h3>
+              <p><strong>Miraculous:</strong> Borboleta</p>
+            </div>
+          </div>
+        </article>
+
+        </div>
+      </section>
+      
+      <!----------KWAMIS------->
+      <section id="kwamis" class="kwami-section">
+        <h2 class="titulo-center">Os Kwamis</h2>
+        
+        <div class="kwami-menu">
+            <button onclick="mostrarKwami('tikki')">Tikki</button>
+            <button onclick="mostrarKwami('plagg')">Plagg</button>
+            <button onclick="mostrarKwami('nooroo')">Nooroo</button>
+            <button onclick="mostrarKwami('duusu')">Duusu</button>
+            <button onclick="mostrarKwami('wayzz')">Wayzz</button>
+            <button onclick="mostrarKwami('trixx')">Trixx</button>
+            <button onclick="mostrarKwami('pollen')">Pollen</button>
+            <button onclick="mostrarKwami('sass')">Sass</button>
+            <button onclick="mostrarKwami('fluff')">Fluff</button>
+            <button onclick="mostrarKwami('longg')">Longg</button>
+            <button onclick="mostrarKwami('kaalki')">Kaalki</button>
+            <button onclick="mostrarKwami('daizzi')">Daizzi</button>
+            <button onclick="mostrarKwami('roaar')">Roaar</button>
+            <button onclick="mostrarKwami('xuppu')">Xuppu</button>
+            <button onclick="mostrarKwami('mullo')">Mullo</button>
+            <button onclick="mostrarKwami('ziggy')">Ziggy</button>
+            <button onclick="mostrarKwami('orikko')">Orikko</button>
+            <button onclick="mostrarKwami('barkk')">Barkk</button>
+            <button onclick="mostrarKwami('stompp')">Stompp</button>
+        </div>
+
+        <div id="display-kwami" class="kwami-display fade-in">
+            <p>Clique em um nome para ver as características...</p>
+        </div>
+      </section>
+
+      <!----------miraculous------->
+      <section id="miraculous" class="miraculous-section">
+        <h2 class="titulo-center">Os Miraculous</h2>
+        
+        <div class="miraculous-menu">
+            <button onclick="mostrarMiraculous('joaninha')">Joaninha</button>
+            <button onclick="mostrarMiraculous('gato')">Gato</button>
+            <button onclick="mostrarMiraculous('borboleta')">Borboleta</button>
+            <button onclick="mostrarMiraculous('pavão')">Pavão</button>
+            <button onclick="mostrarMiraculous('tartaruga')">Tartaruga</button>
+            <button onclick="mostrarMiraculous('raposa')">Raposa</button>
+            <button onclick="mostrarMiraculous('abelha')">Abelha</button>
+            <button onclick="mostrarMiraculous('rato')">Rato</button>
+            <button onclick="mostrarMiraculous('boi')">Boi</button>
+            <button onclick="mostrarMiraculous('tigre')">Tigre</button>
+            <button onclick="mostrarMiraculous('coelho')">Coelho</button>
+            <button onclick="mostrarMiraculous('dragão')">Dragão</button>
+            <button onclick="mostrarMiraculous('cobra')">Cobra</button>
+            <button onclick="mostrarMiraculous('cavalo')">Cavalo</button>
+            <button onclick="mostrarMiraculous('cabra')">Cabra</button>
+            <button onclick="mostrarMiraculous('macaco')">Macaco</button>
+            <button onclick="mostrarMiraculous('galo')">Galo</button>
+            <button onclick="mostrarMiraculous('cachorro')">Cachorro</button>
+            <button onclick="mostrarMiraculous('porco')">Porco</button>
+        </div>
+
+        <div id="display-miraculous" class="miraculous-display fade-in">
+            <p>Clique em um nome para ver as características...</p>
+        </div>
+
+        <!--Historia miraculous-->
+        <div class="historia-timeline-container">
+          <h3 class="titulo-center" style="font-size: 2.5rem; margin-top: 60px;">A História das Joias</h3>
+          
+            <div class="timeline">
+                <!-- Item 1 e 2 mantidos iguais... -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>O Início do Universo</h3>
+                        <p>Os kwamis existem desde o começo do universo como criaturas abstratas formadas a partir de novos conceitos ou emoções, como criação e destruição. Por serem imateriais, eles não podiam interagir com o mundo físico até a criação das joias.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Há 5.000 anos (O Mago)</h3>
+                        <p>Há cinco mil anos, um mago conseguiu ajudar os kwamis a interagir com os humanos criando os Miraculous. O Miraculous da Joaninha (Tikki) e o do Gato (Plagg) tornaram-se os mais poderosos, capazes de conceder o Poder Absoluto quando usados juntos.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>A Ordem dos Guardiões</h3>
+                        <p>A Ordem protegia as joias no Tibete até que um erro do jovem aprendiz Fu causou a destruição do templo. No caos, o Miraculous do Pavão, o da Borboleta e o Grimório Sagrado foram perdidos, e Fu fugiu com a última caixa de joias.</p>
+                    </div>
+                </div>
+
+                <!-- era moderna -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>A Era Moderna: Guardiões</h3>
+                        <p>Para combater Gabriel Agreste, a responsabilidade de proteger as caixas mudou de mãos em Paris:</p>
+                        
+                        <!-- TABELA OBRIGATÓRIA PARA O TRABALHO -->
+                        <table class="wiki-tabela">
+                            <thead>
+                                <tr>
+                                    <th>Período</th>
+                                    <th>Guardião</th>
+                                    <th>Situação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pré-Temporada 3</td>
+                                    <td>Mestre Wang Fu</td>
+                                    <td>Escondido em Paris</td>
+                                </tr>
+                                <tr>
+                                    <td>Fim da Temporada 3</td>
+                                    <td>Ladybug (Marinette)</td>
+                                    <td>Guardiã Oficial</td>
+                                </tr>
+                                <tr>
+                                    <td>Temporada 5</td>
+                                    <td>Monarch (Gabriel)</td>
+                                    <td>Roubou quase todas as joias</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+      <!---TEMPORADAS---->
+      <section id="temporadas" class="temporadas-section">
+        <h2 class="titulo-center">Temporadas</h2>
+        
+        <div class="carousel-wrapper">
+          <button class="carousel-btn left" onclick="moverCarrossel(-1)">&#10094;</button>
+          
+          <div class="carousel-track" id="track-temporadas">
+            
+            <div class="season-card">
+              <img src="https://static.wikia.nocookie.net/miraculousladybug/images/4/4b/Miraculous_%28T1-3%29_poster.png/revision/latest/scale-to-width-down/1000?cb=20250730222443&path-prefix=pt-br" alt="Temporada 1" onerror="this.src='https://placehold.co/300x450/000/fff?text=Temporada+1'">
+              <div class="season-info">
+                <h3>1ª Temporada</h3>
+                <p>O início de tudo. Marinette e Adrien recebem seus Miraculous e se tornam os heróis de Paris, enfrentando os primeiros vilões akumatizados por Hawk Moth.</p>
+              </div>
+            </div>
+
+            <div class="season-card">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/04/Season-2-Poster-2.webp" alt="Temporada 2" onerror="this.src='https://placehold.co/300x450/000/fff?text=Temporada+2'">
+              <div class="season-info">
+                <h3>2ª Temporada</h3>
+                <p>Novos poderes e aliados surgem. Hawk Moth fica mais perigoso, e a dupla de heróis precisa recrutar amigos como Rena Rouge, Carapace e Queen Bee.</p>
+              </div>
+            </div>
+
+            <div class="season-card">
+              <img src="https://www.miraculousladybug.com/wp-content/uploads/2023/05/Season-3-Poster-2.webp" alt="Temporada 3" onerror="this.src='https://placehold.co/300x450/000/fff?text=Temporada+3'">
+              <div class="season-info">
+                <h3>3ª Temporada</h3>
+                <p>O Mestre Fu passa por dificuldades e o segredo dos Miraculous corre risco. Mayura se junta a Hawk Moth criando Sentimonstros perigosos.</p>
+              </div>
+            </div>
+
+            <div class="season-card">
+              <img src="https://static.wikia.nocookie.net/miraculousladybug/images/7/72/Miraculous_%28T4%29_poster.png/revision/latest/scale-to-width-down/1000?cb=20250819173616&path-prefix=pt-br" alt="Temporada 4" onerror="this.src='https://placehold.co/300x450/000/fff?text=Temporada+4'">
+              <div class="season-info">
+                <h3>4ª Temporada</h3>
+                <p>Ladybug agora é a Guardiã dos Miraculous. Com novas responsabilidades, ela enfrenta o vilão Shadow Moth, que uniu os poderes da Borboleta e do Pavão.</p>
+              </div>
+            </div>
+
+            <div class="season-card">
+              <img src="https://static.wikia.nocookie.net/miraculousladybug/images/1/1e/Miraculous_%28T5%29_poster.png/revision/latest?cb=20250826171227&path-prefix=pt-br" alt="Temporada 5" onerror="this.src='https://placehold.co/300x450/000/fff?text=Temporada+5'">
+              <div class="season-info">
+                <h3>5ª Temporada</h3>
+                <p>Monarch agora possui quase todos os Miraculous da caixa. Ladybug e Cat Noir devem lutar contra o tempo para recuperar as joias e salvar os Kwamis.</p>
+              </div>
+            </div>
+
+            <div class="season-card">
+              <img src="https://static.wikia.nocookie.net/miraculousladybug/images/f/fc/Miraculous_%28T6%29_poster.png/revision/latest/scale-to-width-down/1000?cb=20251130144228&path-prefix=pt-br" alt="Temporada 6" onerror="this.src='https://placehold.co/300x450/000/fff?text=Temporada+6'">
+              <div class="season-info">
+                <h3>6ª Temporada</h3>
+                <p>Uma nova era começa. Com um novo vilão à solta e segredos revelados, a dinâmica da equipe muda completamente enfrentando desafios inéditos.</p>
+              </div>
+            </div>
+
+          </div>
+          
+          <button class="carousel-btn right" onclick="moverCarrossel(1)">&#10095;</button>
+        </div>
+      </section>
+
+      <!--FILMES/ESPECIAIS-->
+      <section id="filmes" class="filmes-section">
+        <h2 class="titulo-center">Filmes e Especiais</h2>
+        
+        <div class="filmes-grid">
+          <div class="filme-card">
+            <img src="https://static.wikia.nocookie.net/miraculousladybug/images/6/6c/Miraculous_%E2%80%93_O_Filme_%28P%C3%B4ster%29.jpg/revision/latest/scale-to-width-down/1000?cb=20230520010713&path-prefix=pt-br" alt="Miraculous: O Filme" onerror="this.src='https://placehold.co/300x450/444/fff?text=O+Filme'">
+            <h3>Miraculous: O Filme</h3>
+          </div>
+          
+          <div class="filme-card">
+            <img src="https://www.miraculousladybug.com/wp-content/uploads/2024/04/TV-Special-New-York-Poster-2-scaled.webp" alt="Heróis Unidos" onerror="this.src='https://placehold.co/300x450/444/fff?text=New+York'">
+            <h3>Especial Nova York</h3>
+          </div>
+
+          <div class="filme-card">
+            <img src="https://www.miraculousladybug.com/wp-content/uploads/2023/05/TV-Special-Shanghai-Poster-2-scaled.webp" alt="A Lenda do Dragão" onerror="this.src='https://placehold.co/300x450/444/fff?text=Shanghai'">
+            <h3>Especial Xangai</h3>
+          </div>
+
+          <div class="filme-card">
+            <img src="https://www.miraculousladybug.com/wp-content/uploads/2023/05/TV-Special-Paris-Poster-2-scaled.webp" alt="Aventura em Paris" onerror="this.src='https://placehold.co/300x450/444/fff?text=Paris'">
+            <h3>Especial Paris</h3>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <script src="script.js"></script>
+
+    <footer>
+      <p>&copy; 2026 - Vitória Calonga</p>
+      <p>Para saber mais acesse a  <a href="https://www.miraculousladybug.com/about-the-tv-series/" target="_blank">Wiki Oficial</a></p>
+    </footer>
+  </body>
+
+</html>
+

@@ -1,0 +1,1155 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+/* Cria as variáveis iniciais para quando a página carrega */
+:root {
+    --cor-kwami: #ff00ff; /* Começa rosa padrão */
+    --cor-miraculous: #ff0033; /* Começa vermelho padrão */
+}
+
+
+/*titulo maior*/
+h1{
+    font-family: 'Lobster', cursive;
+}
+/*subtitulos*/
+h2, h3 {
+  font-family: 'Inter', sans-serif;
+}
+
+/*cursor*/
+body { 
+    background: transparent;
+    min-height: 100vh;
+    overflow-x: hidden; 
+
+  cursor: url('ioio_ladybug.png') 20 20, auto;
+
+}
+
+/* Garante que o ioiô continue aparecendo quando passar o mouse em links e botões */
+a, button, .char-card {
+    cursor: url('ioio_ladybug.png') 16 16, pointer !important;
+}
+
+/* TEXTO */
+body, p, li, a {
+  font-family: 'Inter', sans-serif;
+}
+
+body { 
+    background: white;
+    min-height: 100vh;
+}
+
+#inicio.hero-section {
+  padding-top: 80px;
+}
+
+.header-inner{
+    display: flex;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+  
+    background: linear-gradient(to bottom, 
+            rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100% );
+
+    /*joga a logo para a esquerda e o nav para a direita */
+    justify-content: space-between;
+    
+    /*garante que ele fique na frente de tudo (camada superior) */
+    z-index: 1000; 
+    
+    /* Remove sombras que possam marcar a divisão */
+    padding: 10px 10%; /* Afasta um pouco das bordas da tela */
+    
+}
+
+.logo-img {
+    height: 45px; /* Ajuste conforme necessário */
+    width: auto;
+    
+}
+
+/*cada item da lista*/
+nav ul{
+    display: flex; /* para deixar a lista em uma linha só (inline)*/
+    justify-content: flex-end; /*empurra p direta*/
+    padding: 10px;
+    gap: 25px; /*espaco entre cada item*/
+    list-style: none; /*remove bollinhas da lista*/
+}
+
+/*link de cada secao*/
+nav a{
+    text-decoration: none; /*remove sublinhado do link*/
+    color: white; /*cor do texto*/
+    font-weight: bold; /*deixa a letra em negrito;*/
+}
+
+.hero-section {
+    background-image: url('https://www.miraculousladybug.com/wp-content/uploads/2024/04/Season-3-Header.webp');
+    background-size: cover; /* Cobre todo o espaço disponível*/
+    background-position: center; /* Centraliza a imagem */
+    height: 100vh; /* Ocupa 100% da altura da tela  */
+    
+    display: flex; /*alinhar o conteúdo*/
+    flex-direction: column; /* Coloca o H1 em cima do P*/
+    justify-content: center; /* Centraliza verticalmente*/
+    align-items: flex-start; /*alinha à esquerda */
+    padding-left: 2%; /*add um recuo da borda esquerda */
+}
+
+.hero-content {
+    color: white;
+}
+
+/*titulo*/
+.miraculous-text{
+    text-align: center;
+    font-size: 8rem; /* Tamanho grande para impacto*/
+    margin-bottom: 0; /*para deixar mais colado*/
+    line-height: 0.7; /*para unir mais o de baixo com o de cima*/
+    font-weight: 100;
+}
+
+/*subtitulo*/
+.hero-content h1 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 2.3rem; /* Tamanho grande para impacto*/
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    max-width: 600px;
+}
+
+/*-------------corpo ------*/
+
+/*-------SINOPSE--------*/
+
+.container-text{
+    background-color: transparent;
+    color: white;
+    display: flex; /*alinhar o conteúdo*/
+    flex-direction: column; /* Coloca o H1 em cima do P*/
+    justify-content: center; /* Centraliza verticalmente*/
+}
+
+
+/* ── KWAMIS DECORATIVOS DA SINOPSE ── */
+
+/* Container precisa de position relative (já tem) */
+
+.deco-kwami {
+  position: absolute;    /* sai do fluxo e flutua sobre a seção */
+  top: 300px;             /* distância do topo da sinopse */
+  width: 140px;
+  object-fit: contain;
+  pointer-events: none;  /* não atrapalha cliques */
+  filter: drop-shadow(0 0 18px rgba(255, 0, 255, 0.5));
+
+  /* Animação de flutuação */
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+.deco-tikki-plagg {
+  right: 5%;              /* Tikki no canto esquerdo */
+  animation-delay: 0s;   /* começa imediatamente */
+}
+
+
+/* Animação de subir e descer suavemente */
+@keyframes flutuar {
+  0%   { transform: translateY(0px);    }
+  50%  { transform: translateY(-18px);  }
+  100% { transform: translateY(0px);    }
+}
+
+/*para o texto da sinopse*/
+@keyframes surgir {
+    from {
+        opacity: 0;         /* Começa invisível */
+        transform: translateY(20px); /* Começa 20px abaixo da posição original */
+    }
+    to {
+        opacity: 1;         /* Fica totalmente visível */
+        transform: translateY(0);    /* Volta para a posição normal */
+    }
+}
+
+/* 2. Criamos a classe que ativa a animação */
+.fade-in h2, h3, p{
+    animation: surgir 1.5s ease-out forwards;
+    /* surgir: nome da animação
+       1.5s: duração (mais lento = mais elegante)
+       ease-out: começa rápido e termina devagar
+       forwards: mantém o elemento visível após terminar
+    */
+}
+
+.sinopse-container{
+    background-image: url('https://www.miraculousladybug.com/wp-content/uploads/2024/03/bg_chadow-1.png');
+    margin-top: -240px; /*empura a seção para cima*/
+
+    /* Garante que esta seção fique na camada de cima */
+    position: relative;
+    z-index: 10; 
+    padding: 350px 10% 250px 10%;
+    
+    background-size: cover; /* Cobre todo o espaço disponível*/
+    background-position: center-top; /* unico jeito q consigo deixar ela sobrepondo a imagem de baixo */
+    /*height: 200vh; /* Ocupa 100% da altura da tela  */
+
+    filter: drop-shadow(0px -15px 15px rgba(255, 0, 255, 0.8)); /* Brilho para cima usada em imagens com bordar irregulares */
+}
+
+.titulo-center{
+    font-family: 'Lobster', cursive;
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    font-weight: 100;
+}
+
+.sinopse-content {
+    display: flex;
+    flex-direction: row; /* Coloca os itens em linha (lado a lado) */
+    align-items: center; /* Centraliza a imagem e o texto verticalmente */
+    justify-content: space-between;
+    gap: 50px; /* Cria um espaço entre o texto e a imagem */
+    width: 100%;
+    max-width: 1100px; /* Limita o tamanho para não esticar muito em telas grandes */
+    margin: 0 auto; /* Centraliza o bloco na tela */
+}
+
+/* Coluna 1: O Texto */
+.sinopse-text {
+    flex: 1.2; /* Faz o texto ocupar uma proporção um pouco maior (como na sua referência) */
+    text-align: left;
+    color: white;
+}
+
+.sinopse-text h3 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.sinopse-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* Coluna 2: A Imagem */
+.sinopse-imagem {
+    flex: 1; /* Ocupa o restante do espaço */
+    display: flex;
+    justify-content: center;
+}
+
+.sinopse-imagem img {
+    width: 100%;
+    max-width: 450px; /* Evita que a imagem fique gigante */
+    border-radius: 25px; /* Bordas bem arredondadas iguais às da imagem de referência */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* Uma sombra bonita para dar profundidade */
+    object-fit: cover;
+}
+
+/* RESPONSIVIDADE: O que acontece no celular? */
+@media (max-width: 900px) {
+    .sinopse-content {
+        flex-direction: column; /* Empilha o texto e a foto verticalmente no celular */
+        text-align: center;
+    }
+    .sinopse-text {
+        text-align: center; /* Centraliza o texto em telas pequenas */
+    }
+}
+
+/*PERSONAGENS*/
+
+/* ------- SEÇÃO PERSONAGENS (FUNDO) ------- */
+.personagens-section {
+    background-image: url('https://www.miraculousladybug.com/wp-content/uploads/2024/07/BG-Synopsis-saison.png');
+    background-size: cover;
+    background-position: center top;
+    
+    margin-top: -380px; /* Sobrepõe a sinopse */
+    position: relative;
+    z-index: 10; /* 11 ganha do 10 da Sinopse */
+    
+    padding: 450px 10% 100px 10%; /* Espaço interno alto para o título não grudar no brilho */
+    filter: drop-shadow(0px -15px 15px rgba(255, 0, 255, 0.8)); /* O brilho neon */
+}
+
+/* O Grid que organiza os cards */
+.personagens-grid {
+    display: grid;
+    /* Isso garante que os cards tenham no mínimo 250px e quebrem a linha automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 30px; /* Espaço entre os cards */
+    width: 100%;
+
+    max-width: 1200px; /* Limita a largura total para não esticar em monitores gigantes */
+    margin: 0 auto; /* Centraliza o grid na tela */
+    padding: 20px 0;
+}
+
+
+/* O card principal */
+.char-card {
+    background-color: transparent;
+    width: 100%;
+    height: 320px; /* Altura um pouco menor para ficar mais "quadrado" como na referência */
+    perspective: 1000px; 
+    cursor: pointer; 
+}
+
+
+/* 3. A DOBRADIÇA (O elemento que realmente gira) */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease; /* Define que a animação de giro vai durar 0.6 segundos */
+    transform-style: preserve-3d; /* Garante que a frente e o verso não sejam achatados durante o giro */
+}
+
+/* 4. A CLASSE DO CLIQUE (Adicionada pelo JavaScript) */
+.char-card.girou .card-inner {
+    transform: rotateY(180deg); /* Gira o card 180 graus no eixo Y (como virar a página de um livro) */
+}
+
+/* 5. FRENTE E VERSO (Configurações em comum) */
+.card-front, .card-back {
+    position: absolute; /* Coloca um exatamente em cima do outro */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* O SEGREDO: Torna o lado "de trás" de uma div invisível quando ela está virada */
+    border-radius: 30px; /* Cria os cantos arredondados iguais à imagem de referência */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Agrupamos a frente e o verso para aplicarem a mesma regra de imagem */
+.card-front img, .card-back img {
+    width: 100%;
+    
+    /* aspect-ratio 1/1 garante que a imagem fique num quadrado perfeito, 
+       mesmo que a foto original seja um retângulo */
+    aspect-ratio: 1 / 1; 
+    
+    /* object-fit: cover faz a imagem preencher o quadrado inteiro, 
+       cortando as sobras sem amassar o rosto do personagem */
+    object-fit: cover; 
+    
+    /* border-radius aplica os cantos arredondados apenas na imagem */
+    border-radius: 30px; 
+    
+    margin-bottom: 15px;
+}
+
+/* Ajuste no container do verso para organizar a imagem e o texto */
+.card-back {
+    background-color: #1a1a1a;
+    color: white;
+    transform: rotateY(180deg);
+    
+    /* O padding foi reduzido para caber a imagem + texto sem estourar a altura do card */
+    padding: 10px; 
+    
+    /* O display flex em coluna organiza a imagem em cima e o texto embaixo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    /*border: 2px solid #ff00ff;*/
+    border-radius: 30px;
+    backface-visibility: hidden;
+}
+/* Ajuste nos textos para caberem no card menor */
+.card-front h3{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: white
+}
+
+/* Ajuste de espaçamento para o texto do verso não tomar muito espaço */
+.card-back p {
+    margin-bottom: 2px;
+    font-size: 0.85rem;
+    text-align: center; /* Centralizado para combinar com o layout da foto */
+    width: 100%;
+}
+
+/* --------------KWAMIS----------------*/
+
+/* 1. Container Principal da Seção */
+.kwami-section {
+    background-image: url('https://www.miraculousladybug.com/wp-content/uploads/2024/07/Background-Gallery.webp');
+    background-size: cover;
+    background-position: center top;
+    
+    margin-top: -100px; /* Sobrepõe os Personagens */
+    position: relative;
+    z-index: 12; /* 12 ganha do 11 de Personagens */
+    
+    padding: 150px 10% 250px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    filter: drop-shadow(0px -15px 15px rgba(255, 0, 255, 0.8)); /* O brilho neon */
+}
+
+/* 2. Menu de Botões (Nomes dos Kwamis) */
+.kwami-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os botões "pulem" de linha em telas menores */
+    gap: 15px; /* Espaçamento entre cada botão */
+    margin-bottom: 60px;
+    max-width: 1200px;
+}
+
+/* 3. Estilo dos Botões Individuais */
+.kwami-menu button {
+    background: rgba(255, 255, 255, 0.05); /* Fundo sutil para efeito de vidro */
+    color: white;
+    border: 1px solid var(--cor-kwami); /* Borda roxa semi-transparente */
+    padding: 10px 22px;
+    border-radius: 25px; /* Deixa os botões arredondados (estilo pílula) */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Suaviza a transição de cores e sombras */
+    text-transform: uppercase; /* Deixa os nomes em caixa alta */
+    letter-spacing: 1px;
+}
+
+/*Classe para manter o botão aceso quando você clica nele e efeitor hoover para qunado o mouse passa*/
+.kwami-menu button.ativo, .kwami-menu button:hover {
+    background: var(--cor-kwami); 
+    color: black; 
+    box-shadow: 0 0 20px var(--cor-kwami); 
+    transform: translateY(-3px);
+}
+
+
+
+/* 5. Painel de Exibição (Onde as infos aparecem) */
+.kwami-display {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 350px;
+    background: rgba(0, 0, 0, 0.7); /* Fundo preto translúcido */
+    border: 2px solid var(--cor-kwami);
+    border-radius: 40px;
+    padding: 40px;
+    display: flex; /* Alinha imagem e texto lado a lado */
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* No celular, a imagem fica em cima do texto */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+/*Arruma o texto inicial que fica dentro da caixa vazia */
+.kwami-display > p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+    font-style: italic;
+}
+
+/* 6. Estilo da Imagem do Kwami dentro do Display */
+.kwami-display img {
+    max-height: 250px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px var(--cor-kwami)); /* Brilho místico ao redor do Kwami */
+    margin: 20px;
+}
+
+/* 7. Bloco de Texto (Informações) */
+.kwami-info {
+    flex: 1; /* Ocupa o espaço restante ao lado da imagem */
+    min-width: 300px;
+    color: white;
+    text-align: left;
+}
+
+.kwami-info h3 {
+    font-family: 'Lobster', cursive; /* Fonte estilizada para o nome do Kwami */
+    font-size: 2.8rem;
+    color: var(--cor-kwami);
+    margin-bottom: 15px;
+}
+
+.kwami-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória fina */
+    padding-bottom: 5px;
+}
+
+.kwami-info strong {
+    color: var(--cor-kwami); /* Destaca os rótulos (Miraculous, Poder, etc) */
+}
+
+/*----animação de voo do kwami ao clicar*/
+
+/* Criando a "rota" do voo */
+@keyframes vooDoKwami {
+    0% {
+        opacity: 0;
+        /* X positivo (150px) faz vir da direita. Y positivo (100px) faz vir de baixo. */
+        /* O rotate(30deg) inclina ele para trás dando impulso */
+        transform: translate(150px, 50px) scale(0.3) rotate(30deg);
+    }
+    60% {
+        opacity: 1;
+        /* Ele passa um pouco do ponto indo para a esquerda (-20px) para dar o efeito de "frear" */
+        transform: translate(-20px, -15px) scale(1.1) rotate(-10deg);
+    }
+    100% {
+        /* Para na posição final perfeitamente reta */
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+}
+
+/* Classe que será adicionada pelo JavaScript na imagem */
+.kwami-animado {
+    /* cubic-bezier deixa o voo mais natural, acelerando no meio e freando no final */
+    animation: vooDoKwami 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/*------MIRACULOUSS-------*/
+/*fundo*/
+.miraculous-section {
+    background-image: url('https://www.miraculousladybug.com/wp-content/uploads/2024/07/BG-Synopsis-saison.png'); 
+    background-size: cover;
+    background-position: center top;
+    
+    margin-top: -400px; 
+    position: relative;
+    z-index: 13; /* Camada 13: Ganha da camada 12 (Kwamis) */
+    
+    padding: 400px 10% 250px 10%; /* Espaço interno para o conteúdo não grudar no topo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+    /* Brilho neon na cor vermelha para combinar com o menu */
+    filter: drop-shadow(0px -15px 15px  rgba(255, 0, 255, 0.8)); 
+}
+
+/* 1. Menu de Botões */
+.miraculous-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin-bottom: 60px;
+    max-width: 1000px;
+}
+
+/* 2. Estilo dos Botões Individuais */
+.miraculous-menu button {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid var(--cor-miraculous); 
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 3. Efeito de Hover (Passar o Mouse) */
+.miraculous-menu button:hover, .miraculous-menu button.ativo {
+    background: var(--cor-miraculous); /* Vermelho Ladybug solido */
+    color: white; 
+    box-shadow: 0 0 15px var(--cor-miraculous); /* Brilho neon vermelho */
+    transform: translateY(-3px); 
+}
+
+/* 4. Painel de Exibição */
+.miraculous-display {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 350px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--cor-miraculous);
+    border-radius: 40px;
+    padding: 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+    position: relative;
+    overflow: hidden;
+}
+
+/*Arruma o texto inicial que fica dentro da caixa vazia */
+.miraculous-display > p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+    font-style: italic;
+}
+
+/* 5. Imagem da Joia no Display */
+.miraculous-display img {
+    max-height: 250px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px var(--cor-miraculous)); /* Brilho vermelho na joia */
+    margin: 20px;
+}
+
+/* 6. Bloco de Texto (Informações) */
+.miraculous-info {
+    flex: 1; 
+    min-width: 300px;
+    color: white;
+    text-align: left;
+}
+
+.miraculous-info h3 {
+    font-family: 'Lobster', cursive; 
+    font-size: 2.8rem;
+    color:var(--cor-miraculous);
+    margin-bottom: 15px;
+}
+
+.miraculous-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    padding-bottom: 5px;
+}
+
+.miraculous-info strong {
+    color: var(--cor-miraculous);
+}
+
+/*---------timeline---------*/
+
+.historia-timeline-container {
+    width: 100%;
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 30px;
+    padding-left: 35px;
+    border-left: 3px solid rgba(255, 0, 51, 0.5); /* Linha vermelha vertical */
+}
+
+.timeline-item {
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 0, 51, 0.3);
+    border-radius: 25px;
+    padding: 30px;
+    margin-bottom: 40px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Mantive o efeito hover apenas para dar um toque visual, mas sem o link */
+.timeline-item:hover {
+    transform: scale(1.02);
+    border-color: #ff0033;
+    box-shadow: 0 0 20px rgba(255, 0, 51, 0.3);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -44px; /* Ajuste para centralizar na linha */
+    top: 35px;
+    width: 18px;
+    height: 18px;
+    background: #ff0033;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033;
+}
+
+.timeline-content h3 {
+    font-size: 1.6rem;
+    color: #ff0033;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.timeline-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #efefef;
+}
+
+/* TABELA DA WIKI  */
+.wiki-tabela {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse; /* Junta as bordas da tabela */
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    overflow: hidden; /* Para os cantos arredondados funcionarem */
+}
+
+.wiki-tabela th, .wiki-tabela td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 0, 51, 0.2);
+}
+
+.wiki-tabela th {
+    background-color: rgba(255, 0, 51, 0.6); /* Vermelho Ladybug */
+    color: white;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.wiki-tabela td {
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+
+/* Efeito Hover nas linhas da tabela (Requisito: Hover) */
+.wiki-tabela tbody tr:hover {
+    background-color: rgba(255, 0, 51, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+
+/* SEÇÃO TEMPORADAS */
+.temporadas-section {
+    background-image: url('https://www.miraculousladybug.com/wp-content/uploads/2024/07/BACKGROUND-SAISONS-2226px.webp'); 
+    background-size: cover;
+    background-position: center top;
+    
+    margin-top: -250px; 
+    position: relative;
+    z-index: 14; /* Ganha do 13 (Miraculous) */
+    
+    padding: 200px 5% 250px 5%;
+    filter: drop-shadow(0px -15px 15px rgba(255, 0, 255, 0.8)); /* Neon Laranja */
+}
+
+/* Container que segura a pista e os botões */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* A pista que rola lateralmente */
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    
+    /* Esconde a barra de rolagem mas mantém a função */
+    -ms-overflow-style: none;  /* IE e Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Opera */
+}
+
+.season-card {
+    width: 300px;
+    min-width: 300px;
+
+    flex-shrink: 0;
+    border-radius: 15px;
+    overflow: hidden;
+
+    background-color: #1a1a1a;
+
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+.season-card:hover { 
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(221, 0, 255, 0.877);
+}
+
+.season-card img {
+    width: 100%;
+    aspect-ratio: 2 / 3; 
+    object-fit: cover;
+}
+
+.season-info {
+    padding: 20px;
+    color: white;
+    flex-grow: 1;
+    text-align: justify;
+}
+
+.season-info h3 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Botões de seta do carrossel */
+.carousel-btn {
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    transition: 0.3s;
+}
+.carousel-btn:hover { background: #ff0000; transform: scale(1.1); }
+.carousel-btn.left { left: -10px; }
+.carousel-btn.right { right: -10px; }
+
+
+/* =========================================
+   SEÇÃO FILMES E ESPECIAIS
+   ========================================= */
+
+.filmes-section {
+    background-image: url('https://www.miraculousladybug.com/wp-content/uploads/2024/03/bg_b.png');
+    background-size: cover;
+    background-position: center top;
+
+    margin-top: -200px; 
+    position: relative;
+    z-index: 15; /* Ganha do 14 (Temporadas) */
+    
+    padding: 200px 10% 450px 10%;
+    filter: drop-shadow(0px -15px 15px rgba(255, 0, 255, 0.8)); /* Neon Azul */
+}
+
+/* Grid simples de 4 colunas */
+.filmes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filme-card {
+    background: rgba(7, 7, 7, 0.5);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+.filme-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(202, 38, 224, 0.437);
+}
+
+.filme-card img {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Mantém proporção de pôster de cinema */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.filme-card h3 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/*-----RODAPE------*/
+footer {
+    background-image: url('https://www.miraculousladybug.com/wp-content/uploads/2024/07/Footer-separation-court-1-1.webp');
+    
+    /*Força a imagem a preencher a largura (100%) e a altura exata do rodapé (100%), deixando ela fina! */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+    /* Remove a caixa preta, deixando o fundo de colmeia do site aparecer naturalmente */
+    background-color: transparent; 
+
+    margin-top: -390px; /* Puxa o rodapé um pouquinho para cima para fundir com a seção de filmes */
+    position: relative;
+    z-index: 16; 
+    
+    /* O padding-top define o quão 'alta' a curva luminosa vai ser. 100px é um tamanho ótimo! */
+    padding: 400px 5% 40px 5%; 
+    
+    filter: drop-shadow(0px -5px 15px rgba(255, 0, 255, 0.5)); 
+}
+
+/* O texto dentro do rodapé */
+footer p {
+    text-align: center;
+    font-size: 1rem; 
+    color: #ff99cc; 
+    letter-spacing: 1px; 
+    margin: 0; /* Remove margens padrão que poderiam desalinhar o texto */
+}
+
+
+/* Rastro de ioiôzinhos */
+.rastro-yoyo {
+  position: absolute;       /* posiciona na página toda */
+  width: 24px;
+  height: 24px;
+  pointer-events: none;     /* não atrapalha cliques */
+  z-index: 9999;
+  animation: sumir-yoyo 0.6s ease-out forwards;
+}
+
+@keyframes sumir-yoyo {
+  from { opacity: 1;   transform: scale(1) rotate(0deg); }
+  to   { opacity: 0;   transform: scale(0.2) rotate(180deg); }
+}
+
+/* =========================================
+   ESTRELINHAS MÁGICAS (SÓ COM CSS)
+   ========================================= */
+
+/* Garante que a camada de estrelas não vaze para fora das seções */
+section {
+    position: relative;
+}
+
+/* Cria uma "película" mágica por cima de TODAS as seções do site */
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* O SEGREDO: pointer-events: none faz o mouse "atravessar" as estrelas, 
+       assim você ainda consegue clicar nos botões e nos cards embaixo delas! */
+    pointer-events: none; 
+    
+    z-index: 2; /* Fica na frente do fundo, mas atrás dos botões caso tenham z-index */
+    opacity: 0.7; /* Deixa as estrelas um pouco translúcidas */
+
+    /* Aqui nós carregamos o seu GIF 5 vezes seguidas na mesma camada! */
+    /* Lembre-se de colocar o nome exato do seu arquivo no lugar de 'estrela.gif' */
+    background-image: 
+        url('https://www.miraculousladybug.com/wp-content/uploads/2024/05/star3-2.gif'),
+        url('https://www.miraculousladybug.com/wp-content/uploads/2024/05/star1-1.gif'),
+        url('https://www.miraculousladybug.com/wp-content/uploads/2024/05/star3-2.gif'),
+        url('https://www.miraculousladybug.com/wp-content/uploads/2024/05/star1-1.gif'),
+        url('https://www.miraculousladybug.com/wp-content/uploads/2024/05/star3-2.gif');
+
+    /* Espalhamos elas manualmente pela tela (X e Y) simulando a aleatoriedade */
+    background-position: 
+        10% 15%,  /* Estrela 1: Canto superior esquerdo */
+        85% 20%,  /* Estrela 2: Canto superior direito */
+        75% 85%,  /* Estrela 3: Canto inferior direito */
+        15% 80%,  /* Estrela 4: Canto inferior esquerdo */
+        50% 40%;  /* Estrela 5: Meio da tela */
+
+    /* Damos tamanhos diferentes para cada uma para não parecer repetido */
+    background-size: 
+        100px, 
+        80px, 
+        100px, 
+        50px, 
+        25px;
+
+    background-repeat: no-repeat;
+    
+    /* Animação para fazer a camada toda piscar de leve */
+    animation: pulsarEstrela 3s infinite alternate ease-in-out;
+}
+
+/* Faz as estrelinhas brilharem mais forte e mais fraco sozinhas */
+@keyframes pulsarEstrela {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.9; }
+}
+
+
+/*RESPONSIVIDADE*/
+
+/*----------TABLET (até 900px) ── */
+@media (max-width: 900px) {
+
+  /* Header */
+  .header-inner {
+    padding: 14px 5%;
+  }
+  nav ul {
+    gap: 16px;
+  }
+  nav a {
+    font-size: 0.75rem;
+  }
+
+  /* Hero */
+  .miraculous-text {
+    font-size: 5rem;
+  }
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Títulos */
+  .titulo-center {
+    font-size: 2.4rem;
+  }
+
+  /* Personagens — 3 colunas vira 2 */
+  section#personagens.personagens-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 130px 6% 80px 6%;
+  }
+
+  /* Kwami display — lado a lado vira coluna */
+  .kwami-display {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .kwami-info {
+    text-align: center;
+    min-width: unset;
+  }
+
+}
+
+/* ── CELULAR (até 600px) ── */
+@media (max-width: 600px) {
+
+  /* Header — logo + nav em coluna */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 5%;
+    /* Fundo mais sólido para não vazar o conteúdo */
+    background: rgba(5, 0, 15, 0.92);
+  }
+  .logo-img {
+    height: 36px;
+  }
+  nav ul {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  nav a {
+    font-size: 0.7rem;
+    letter-spacing: 0.8px;
+  }
+
+  /* Hero */
+  .hero-section {
+    padding-left: 5%;
+    align-items: center;        /* centraliza no celular */
+    text-align: center;
+  }
+  .miraculous-text {
+    font-size: 3.5rem;
+  }
+  .hero-content h1 {
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+
+  /* Sinopse */
+  .sinopse-container {
+    padding: 140px 6% 80px 6%;
+  }
+  .sinopse-text blockquote {
+    font-size: 1rem;
+  }
+
+  /* Personagens — 2 colunas vira 1 */
+  section#personagens.personagens-grid {
+    grid-template-columns: 1fr;
+    padding: 120px 8% 60px 8%;
+    gap: 24px;
+  }
+  .char-card {
+    height: 380px;
+  }
+
+  /* Título */
+  .titulo-center {
+    font-size: 2rem;
+    margin-bottom: 28px;
+  }
+
+  /* Kwamis */
+  .kwami-section {
+    padding: 120px 5% 60px 5%;
+  }
+  .kwami-menu {
+    gap: 8px;
+  }
+  .kwami-menu button {
+    padding: 7px 14px;
+    font-size: 0.72rem;
+  }
+  .kwami-display {
+    padding: 24px 16px;
+    border-radius: 20px;
+  }
+  .kwami-display img {
+    max-height: 160px;
+  }
+  .kwami-info h3 {
+    font-size: 2rem;
+  }
+  .kwami-info p {
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 12px 5%;
+  }
+  .footer-nav {
+    justify-content: center;
+    gap: 14px;
+  }
+  .footer-copy {
+    text-align: center;
+  }
+
+}
