@@ -10,4 +10,7 @@ export class Pessoa {
 
   @Column()
   idade: number;
+
+  @Column()
+  senha: string;
 }

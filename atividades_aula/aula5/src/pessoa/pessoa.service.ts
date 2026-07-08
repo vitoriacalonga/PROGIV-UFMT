@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreatePessoaDto } from './dto/create-pessoa.dto';
 import { Pessoa } from './entities/pessoa.entity';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class PessoaService {
@@ -11,8 +12,12 @@ export class PessoaService {
     private pessoaRepository: Repository<Pessoa>,
   ) {}
 
-  create(createPessoaDto: CreatePessoaDto) {
-    return this.pessoaRepository.save(createPessoaDto);
+  async create(createPessoaDto: CreatePessoaDto) {
+    const salt = await bcrypt.genSalt(); // Adiciona aleatoriedade
+    const hash = await bcrypt.hash(createPessoaDto.senha, salt);
+    
+    createPessoaDto.senha = hash; // Substitui a senha pura pelo hash
+    return this.pessoaRepository.save(createPessoaDto); 
   }
 
   findAll() {
