@@ -1,0 +1,17 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: miraculous_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: miraculous_wiki
+      MYSQL_USER: miraculous
+      MYSQL_PASSWORD: miraculous123
+      MYSQL_ROOT_PASSWORD: root123
+    ports:
+      - "3306:3306"
+    volumes:
+      - miraculous_mysql_data:/var/lib/mysql
+
+volumes:
+  miraculous_mysql_data:
